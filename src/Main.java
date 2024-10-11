@@ -54,7 +54,7 @@ public class Main {
 			for (int i=0; i<=partie; i++) {
 				System.out.println("Merci que le jeu commence");
 				for (i=1; i<=2; i++) {
-					int joueur;
+					int joueur=0;
 					System.out.println("Choix du joueur " + "joueur number");
 					list_joueur.add(joueur);
 					System.out.println("");
