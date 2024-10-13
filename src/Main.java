@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +6,7 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		String saisie;
-		int partie;
+		int partie=0;
 
 
 		System.out.println("Bienvenue sur le jeu du shifumi !");
@@ -18,7 +16,6 @@ public class Main {
 		System.out.println("FR = FRANCE, IN=INDONESIE, MA=MALAISIE");			
 
 		saisie = sc.next();
-		partie= Integer.parseInt(sc.next());
 
 		switch (saisie)
 		{
@@ -47,19 +44,18 @@ public class Main {
 			break;
 		}
 
-		List<Integer> list_joueur= new ArrayList<Integer>();
-
 		System.out.println("Combien de parties souhaitez-vous faire  1,3,5,7 ou 9 ?");
-		if (partie%2!=0 && partie<=9) {
-			for (int i=0; i<=partie; i++) {
-				System.out.println("Merci que le jeu commence");
-				for (i=1; i<=2; i++) {
-					int joueur;
-					System.out.println("Choix du joueur " + "joueur number");
-					list_joueur.add(joueur);
-					System.out.println("");
-				}
-
+		partie= Integer.parseInt(sc.next());
+		
+		if (partie % 2 != 0 && partie <=9) {
+			System.out.println("Merci que le jeu commence");
+			
+			
+			for (int i=1; i<=partie; i++) {
+					System.out.println("Choix du joueur 1 (0, 1 ou2)");
+					String choixj1 = sc.next();
+					System.out.println("Choix du joueur 2 (0, 1 ou2)");
+					String choixj2 = sc.next();
 			}
 		}
 		else {
